@@ -2,20 +2,23 @@ import React from "react";
 import Login from "./Login";
 import Signup from './Signup';
 import { BrowserRouter,Route,Routes } from "react-router-dom";
-import { All } from "./All";
-import Display from "./Display";
+
+import Option_selection from "./Option_selection";
+import Dashboard from "./Dashboard";
+import Home_Screen from './Home_Screen'
 // import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
   return (
      <>
-    <Display/>
-        <Routes>
-               <Route path="/" element={<Login/>}></Route>
-               <Route path="/signup" element={<Signup/>}></Route>
-          </Routes>
+     
+    <Home_Screen/>
+       
+          
       </>
   );
 }
 
 export default App;
+
+

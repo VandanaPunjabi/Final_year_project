@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter,Route,Routes } from "react-router-dom";
+import { BrowserRouter,Route,Routes, createBrowserRouter } from "react-router-dom";
 import Login from "./Login";
 import Signup from './Signup';
+import Dashboard from './Dashboard';
+import Home_Screen from './Home_Screen';
+import Option_selection from './Option_selection';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,6 +16,15 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <App />
+
+    <Routes>
+               <Route path="/login" element={<Login/>}></Route>
+               <Route path="/signup" element={<Signup/>}></Route>
+               <Route path="/dashboard" element={<Dashboard/>} ></Route>
+               <Route path="/" element={<Home_Screen/>}></Route>
+               <Route path="/options" element={<Option_selection/>}></Route>
+               <Route path="/dash" element={<Dashboard/>}></Route>
+          </Routes>
    
     </BrowserRouter>
     
